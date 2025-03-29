@@ -10,3 +10,4 @@ tufte-inspired.lua
 /*_files/
 /.venv/
 /.luarc.json
+.Rproj.user
