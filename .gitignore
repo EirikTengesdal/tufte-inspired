@@ -15,6 +15,7 @@ custom.yml
 
 # R/RStudio files
 .Rproj.user
+.Rhistory
 *.Rproj
 
 # Development and temporary files
