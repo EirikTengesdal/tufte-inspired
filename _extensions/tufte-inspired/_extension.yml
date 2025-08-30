@@ -8,29 +8,60 @@ contributes:
     output-dir: _manuscript
   formats:
     html:
-      page-layout: full
+      # page-layout: full
+      page-layout: article
       reference-location: margin
       title-block-style: none
-      css: styles.scss
+      tbl-cap-location: margin
+      cap-location: margin
+      css:
+        - styles.scss
+        - et-book.css # For old-style figures in et-book font
       number-sections: false
-      linkcolor: Maroon
-      backgroundcolor: FloralWhite
-      sidebarbackgroundcolor: FloralWhite
-      mainfont: "ETBembo"
+      mainfont: "et-book" # To get both in HTML and Typst PDF, specify in index.qmd
       toc: true
       toc-location: left
       toc-title: "Contents"
+      #toc-title: "Innholdsfortegnelse" # Norwegian
       code-annotations: hover
       default-image-extension: svg
       filters:
         - citing-html.lua
+      template-partials:
+        - title-block.html
+      # English terms for the `title-block.html` template partial, I do not know how to access the values otherwise
+      title-block-author-single: "Author"
+      title-block-author-plural: "Authors"
+      title-block-affiliation-single: "Affiliation"
+      title-block-affiliation-plural: "Affiliations"
+      title-block-published: "Published"
+      title-block-modified: "Modified"
+      title-block-keywords: "Keywords"
+      related-formats-title: "Other formats"
+      section-title-abstract: "Abstract"
+      # If Norwegian, uncomment:
+      # title-block-author-single: "Forfatter"
+      # title-block-author-plural: "Forfattere"
+      # title-block-affiliation-single: "Forfatteradresse"
+      # title-block-affiliation-plural: "Forfatteradresser"
+      # title-block-published: "Dato"
+      # title-block-modified: "Endret"
+      # title-block-keywords: "Stikkord"
+      # related-formats-title: "Andre formater"
+      # section-title-abstract: "Sammendrag"
 
     typst:
+      paper-size: "a4"
+      lang: "nb"
+      region: "NO"
+      section-numbering: "1.1.1"
+      #fig-cap-location: bottom
+      # font-paths: ["./fonts"] # Users should add their own font paths as needed
       template-partials:
         - definitions.typ
         - typst-template.typ
         - typst-show.typ
-
       filters:
         - tufte-inspired.lua
-      
+        - bibliography-title.lua
+        - wrap-wideblock.lua

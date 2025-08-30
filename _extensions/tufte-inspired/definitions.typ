@@ -180,4 +180,5 @@
       }
     )
 }
+
 #show figure: set text(size: 8pt)

@@ -10,11 +10,13 @@ $if(by-author)$
   authors: (
     $for(by-author)$
       $if(it.name.literal)$
-          ( name: [$it.name.literal$],
-            affiliation: [$for(it.affiliations)$$it.name$$sep$, $endfor$],
-            location: [$it.location$],
-            role: [$for(it.roles)$$it.role$$sep$, $endfor$],
-            email: [$it.email$] ),
+          (
+          name: [$it.name.literal$],
+          affiliation: [$for(it.affiliations)$$it.name$$sep$, $endfor$],
+          location: [$it.location$],
+          role: [$for(it.roles)$$it.role$$sep$, $endfor$],
+          email: "$it.email$"
+          ),
       $endif$
     $endfor$    
   ),
@@ -22,7 +24,6 @@ $endif$
 $if(date)$
   date: "$date$",
 $endif$
-
 $if(lang)$
   lang: "$lang$",
 $endif$
@@ -34,13 +35,10 @@ $if(abstract)$
   abstracttitle: "$labels.abstract$",
 $endif$
 $if(margin)$
-  margin: ($for(margin/pairs)$$margin.key$: $margin.value$,$endfor$),
+  margin: ($for(margin/pairs)$$margin.key$: $margin.value$, $endfor$),
 $endif$
-$if(papersize)$
-  paper: "$papersize$",
-$endif$
-$if(mainfont)$
-  font: ("$mainfont$",),
+$if(paper-size)$
+  paper: "$paper-size$",
 $endif$
 $if(fontsize)$
   fontsize: $fontsize$,
@@ -53,6 +51,12 @@ $if(toc)$
 $endif$
 $if(version)$
   version: [$version$],
+$endif$
+$if(reference-section-title)$
+  bibliography-title: "$reference-section-title$",
+$endif$
+$if(bibliographystyle)$
+  bibliography-style: "$bibliographystyle$",
 $endif$
 $if(first-page-footer)$
  first-page-footer: [$first-page-footer$],

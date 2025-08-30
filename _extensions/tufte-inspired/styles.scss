@@ -1,11 +1,23 @@
-.sidebar nav[role="doc-toc"] ul > li > a.active,
-.sidebar nav[role="doc-toc"] ul > li > ul > li > a.active {
-  border-left: 1px solid maroon;
-  color: maroon !important;
+.sidebar nav[role="doc-toc"] ul > li > a.active, .sidebar nav[role="doc-toc"] ul > li > ul > li > a.active {
+  border-left: 1px solid #2761e3;
+  color: #2761e3 !important;
+}
+
+.sidebar nav[role=doc-toc] ul > li > a:hover,
+.sidebar nav[role=doc-toc] ul > li > ul > li > a:hover {
+  color: #000080 !important
+}
+
+a:hover {
+  color: #000080;
+}
+
+.column-margin figcaption, .margin-caption, aside {
+  font-size: 1.1rem;
 }
 
 .quarto-title-banner {
-  margin-bottom: 1em;
+  margin-bottom: 0;
   background: transparent;
 }
 
@@ -17,11 +29,33 @@
 .btn {
   background-color: #316e6b !important;
 }
+
 .quarto-title-meta-heading {
   letter-spacing: .1em;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: .9rem;
+  opacity: .8;
 }
+
+#title-block-header.quarto-title-block.default .quarto-title-meta-heading, #title-block-header.quarto-title-block.default .abstract .block-title {
+  margin-top: 0;
+  font-size: .9rem;
+}
+
+.quarto-title-meta-contents p, #title-block-header.quarto-title-block.default .keywords > p, #title-block-header.quarto-title-block.default .description > p, #title-block-header.quarto-title-block.default .abstract > p {
+  font-size: 1rem;
+  margin-top: -0.5rem;
+  line-height: 1.5;
+}
+@media (min-width: 992px) {
+  .quarto-title-banner {
+    padding-top: 2em;
+  }
+}
+
 .quarto-title-meta-contents a {
-  font-size: 0; /* Hide the original text */
+  font-size: 0; // Hide the original text
   // font-kerning: 1.2em;
 }
 
@@ -34,14 +68,182 @@
   color: #747e7f;
   font-size: 90%;
   font-stretch: 90%;
-  background-color: #8f1d1c0a !important;
+  // background-color: #8f1d1c0a !important;
+  background-color: #E3E3EB !important;
 }
-.sidebar {
+
+// #E3E3EB = 90 % NavyBlue and #FFFFF8 https://meyerweb.com/eric/tools/color-blend/#000080:FFFFF8:8:hex
+
+// .sidebar {
+//  font-family: sans-serif;
+//} 
+
+div.sourceCode {
+  //background-color: #8f1d1c0a;
+  //border: 1px solid rgba(233,236,239,.65);
+  border-radius: .375rem;
+}
+
+body {
+  font-size: 15px;
+  line-height: 2rem;
+  quotes: "‘" "’";
+  background-color: #FFFFF8;
+}
+
+.tippy-box[data-theme~="quarto"] {
+  color: inherit;
+  background-color: #FFFFF8;
+}
+
+.documenttype {
   font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  font-size: initial;
+  margin-bottom: 0;
+}
+
+.documenttype a {
+  //color: #bfbfbf;
+  color: #AAAAA8;
+}
+
+//#AAAAA8 = 40 % gray + #FFFFF8 https://meyerweb.com/eric/tools/color-blend/#808080:FFFFF8:8:hex */
+
+p {
+  line-height: 2rem;
+}
+
+p, ol, ul {
+  font-size: 1.4rem;
+}
+
+.csl-entry {
+  font-size: 1.1rem;
+}
+
+:root {
+  font-size: 15px;
+}
+
+.column-margin p {
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+div.hanging-indent {
+  margin-left: 0;
+  text-indent: 0;
+}
+
+.hanging-indent div.csl-entry {
+  margin-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+h1.title {
+  /* font-style: normal; */
+  font-weight: 400 !important;
+  /* margin-top: 2.1rem; */
+  margin-top: 1rem;
+  margin-bottom: 1.5rem !important;
+  font-size: 3.2rem;
+  line-height: 1;
+}
+
+h1.unnumbered {
+  font-size: 2rem;
+}
+
+h1 {
+  margin-top: 2.1rem;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.sidebar nav[role="doc-toc"] > h2 {
+  font-size: 1.1rem;
+}
+
+.sidebar .toc-actions>h2,
+.sidebar .toc-actions>.h2,
+.sidebar .quarto-code-links>h2,
+.sidebar .quarto-code-links>.h2,
+.sidebar .quarto-other-links>h2,
+.sidebar .quarto-other-links>.h2,
+.sidebar .quarto-alternate-notebooks>h2,
+.sidebar .quarto-alternate-notebooks>.h2,
+.sidebar .quarto-alternate-formats>h2,
+.sidebar .quarto-alternate-formats>.h2 {
+  font-size: 1.1rem;
+}
+
+p.lead {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  display: block;
+  line-height: 1;
+}
+
+h1, h2, p.lead {
+  font-style: italic;
+  font-weight: 400;
+}
+
+main {
+  margin-top: 0;
+}
+
+.panel-caption, .figure-caption, figcaption {
+  color: #5a6570;
+  font-size: 1.1rem;
+  margin-bottom: .825rem;
+  line-height: 1.3;
+}
+
+.figure-img {
+  /* margin: auto; */
+  margin: 0 -0.5rem 0;
+}
+
+.quarto-figure {
+  margin-bottom: 0;
+}
+
+#quarto-appendix.default {
+  padding-top: 1.5em;
+  margin-top: 1.5em;
+  //background-color: #fffff8;
+}
+
+#quarto-appendix.default .quarto-appendix-heading {
+}
+
+#quarto-appendix.default [role="doc-endnotes"] > ol, #quarto-appendix.default .quarto-appendix-contents > :not(h2):not(.h2) {
+  font-size: 1.1rem;
+}
+
+:root {
+  --bs-nav-link-font-size : 1rem;
+  --bs-link-color-rgb: 39, 97, 227;
+}
+
+pre code {
+  font-size: 1rem;
 }
 
 div.sourceCode {
-  background-color: #8f1d1c0a;
+  background-color: rgba(233,236,239,.65);
   border: 1px solid rgba(233,236,239,.65);
-  border-radius: .375rem;
+  //border-radius: .375rem;
 }

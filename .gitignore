@@ -1,13 +1,37 @@
+# Quarto output files
+/.quarto/
+/_manuscript/
+/*_files/
+*.html
+*.pdf
+*.typst.md
+*.html.md
+output.json
+
+# Personal/template-specific content (not for template distribution)
+index_copy.qmd
+index_copy.html
+custom.yml
+
+# R/RStudio files
+.Rproj.user
+*.Rproj
+
+# Development and temporary files
 .luarc.json
 Math*
 tufte.pdf
 Example*
 article.typ
-tufte-inspired.lua
 
-/.quarto/
-/_manuscript/
-/*_files/
+# Python virtual environments
 /.venv/
-/.luarc.json
-.Rproj.user
+__pycache__/
+*.pyc
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build artifacts and logs
+*.log
