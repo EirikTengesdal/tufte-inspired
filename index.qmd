@@ -1,5 +1,5 @@
 ---
-title: "A Tufte Inspired MaProfessor Emeritus of Political Science, Statistics and Computer Science at Yale University, Edward Tufte is an expert in the presentation of informational graphics. @fig-tufte.uscript"
+title: "A Tufte Inspired Manuscript"
 subtitle: "Using Quarto... and Typst!"
 #shorttitle: "Handout Layout"
 documenttype: Handout

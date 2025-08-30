@@ -45,9 +45,9 @@ See the example `index.qmd` file for detailed usage examples, including:
 - Figure and table placement
 - Bibliography formatting
 
-## Customization
+## Customisation
 
-The template supports customization through:
+The template supports customisation through:
 - Language files (see `custom.yml` for Norwegian terms)
 - Custom CSS for HTML output
 - Typst template modifications
